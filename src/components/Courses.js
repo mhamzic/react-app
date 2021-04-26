@@ -13,14 +13,16 @@ function Courses() {
 
   return (
     <div className="container">
-      <h1>Courses</h1>
-      <table>
+      <h1 className='mb-5'>Courses</h1>
+      <table className="table">
         <thead>
           <tr>
             <th>Course name</th>
             <th>Points</th>
             <td>
-              <Link to="/courses/0">Add New</Link>
+              <Link className="btn btn-success btn-sm" to="/courses/0">
+                Add New
+              </Link>
             </td>
           </tr>
         </thead>
@@ -30,7 +32,9 @@ function Courses() {
               <td>{c.name}</td>
               <td>{c.points}</td>
               <td>
-                <Link to={`/courses/${c._id}`}>Edit</Link>
+                <Link className="btn btn-secondary btn-sm" to={`/courses/${c._id}`}>
+                  Edit
+                </Link>
               </td>
             </tr>
           ))}

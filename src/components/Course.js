@@ -50,32 +50,29 @@ function Course({ match, history }) {
 
   return (
     <div className="container">
-      <h2>Course</h2>
-      <form className="input-form">
-        <div style={{ margin: "12px 0" }}>
-          <label htmlFor="name">Course name:</label>
-          <input type="text" name="name" value={course.name} onChange={changeHandler} />
-        </div>
-        <div style={{ margin: "12px 0" }}>
-          <label htmlFor="points">Course points:</label>
-          <input type="text" name="points" value={course.points} onChange={changeHandler} />
-        </div>
-        <hr />
-        {id !== "0" && (
-          <div className="left">
-            <button type="button" onClick={del}>
-              DELETE
-            </button>
-          </div>
-        )}
+      <h2 className="mb-5">Course</h2>
 
-        <div className="right">
-          <button type="button" onClick={back}>
-            BACK
+      <form>
+        <div className="form-group">
+          <label htmlFor="name">Course name:</label>
+          <input type="text" className="form-control" name="name" value={course.name} onChange={changeHandler} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="points">Course points</label>
+          <input type="text" className="form-control" name="points" value={course.points} onChange={changeHandler} />
+        </div>
+
+        <div className="d-flex justify-content-end">
+          {id !== "0" && (
+            <button type="button" className="btn btn-danger mr-2" onClick={del}>
+              Delete
+            </button>
+          )}
+          <button type="button" className="btn btn-outline-secondary mr-2" onClick={back}>
+            Back
           </button>
-          &nbsp;&nbsp;
-          <button type="button" onClick={save}>
-            SAVE
+          <button type="button" className="btn btn-outline-primary" onClick={save}>
+            Submit
           </button>
         </div>
       </form>

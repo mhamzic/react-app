@@ -1,21 +1,16 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
 
-const styles = {
-  image: {
-    width: "150px",
-    marginBottom: "20px",
-  },
-  title: {
-    fontSize: "4em",
-  },
-};
-
 function Home() {
   return (
     <div className="container">
-      <img src={logo} alt="Logo" style={styles.image} />
-      <div style={styles.title}>Welcome to my First React App</div>
+      <div className="jumbotron text-center">
+        <img height="100px" src={logo} alt="" />
+        <h1 className="display-4">Welcome to First ReactJS App</h1>
+        <p className="lead">This is simple CRUD app which uses Axios, Mongo and React.</p>
+        <hr className="my-4" />
+        <p>Powered by Bootstrap.</p>
+      </div>
     </div>
   );
 }

@@ -1,22 +1,18 @@
 import React from "react";
-import logo from "../assets/images/paragon.png";
+import logo from "../assets/images/p.svg";
 import Navigator from "./Navigator";
 
 const AppHeader = () => {
   return (
-    <div>
-      <header>
-        <div className="left">
-          <img src={logo} alt="logotip" />
-        </div>
-        <div className="left">
-          <h2>My React App</h2>
-        </div>
-        <div className="right">
-          <Navigator />
-        </div>
-      </header>
-    </div>
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-10">
+      <div className="container">
+        <a className="navbar-brand" href="/">
+          <img src={logo} alt="" />
+        </a>
+
+        <Navigator />
+      </div>
+    </nav>
   );
 };
 

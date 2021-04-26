@@ -13,15 +13,17 @@ function Students() {
 
   return (
     <div className="container">
-      <h1>Students</h1>
-      <table>
+      <h1 className="mb-5">Students</h1>
+      <table className="table">
         <thead>
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Birth Year</th>
             <td>
-              <Link to="/students/0">Add New</Link>
+              <Link className="btn btn-success btn-sm" to="/students/0">
+                Add New
+              </Link>
             </td>
           </tr>
         </thead>
@@ -32,7 +34,9 @@ function Students() {
               <td>{student.lastName}</td>
               <td>{student.yearOfBirth}</td>
               <td>
-                <Link to={`/students/${student._id}`}>Edit</Link>
+                <Link className="btn btn-secondary btn-sm" to={`/students/${student._id}`}>
+                  Edit
+                </Link>
               </td>
             </tr>
           ))}

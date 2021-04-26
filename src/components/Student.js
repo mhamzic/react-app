@@ -51,36 +51,31 @@ function Student({ match, history }) {
 
   return (
     <div className="container">
-      <h2>Course</h2>
-      <form className="input-form">
-        <div style={{ margin: "12px 0" }}>
-          <label htmlFor="name">First name:</label>
-          <input type="text" name="firstName" value={student.firstName} onChange={changeHandler} />
+      <h2 className="mb-5">Student</h2>
+      <form>
+        <div className="form-group">
+          <label htmlFor="firstName">First name:</label>
+          <input type="text" className="form-control" name="firstName" value={student.firstName} onChange={changeHandler} />
         </div>
-        <div style={{ margin: "12px 0" }}>
-          <label htmlFor="name">Last name:</label>
-          <input type="text" name="lastName" value={student.lastName} onChange={changeHandler} />
+        <div className="form-group">
+          <label htmlFor="lastName">Last name:</label>
+          <input type="text" className="form-control" name="lastName" value={student.lastName} onChange={changeHandler} />
         </div>
-        <div style={{ margin: "12px 0" }}>
-          <label htmlFor="points">Birth Year:</label>
-          <input type="text" name="yearOfBirth" value={student.yearOfBirth} onChange={changeHandler} />
+        <div className="form-group">
+          <label htmlFor="yearOfBirth">Birth year:</label>
+          <input type="text" className="form-control" name="yearOfBirth" value={student.yearOfBirth} onChange={changeHandler} />
         </div>
-        <hr />
-        {id !== "0" && (
-          <div className="left">
-            <button type="button" onClick={del}>
-              DELETE
+        <div className="d-flex justify-content-end">
+          {id !== "0" && (
+            <button type="button" className="btn btn-danger mr-2" onClick={del}>
+              Delete
             </button>
-          </div>
-        )}
-
-        <div className="right">
-          <button type="button" onClick={back}>
-            BACK
+          )}
+          <button type="button" className="btn btn-outline-secondary mr-2" onClick={back}>
+            Back
           </button>
-          &nbsp;&nbsp;
-          <button type="button" onClick={save}>
-            SAVE
+          <button type="button" className="btn btn-outline-primary" onClick={save}>
+            Submit
           </button>
         </div>
       </form>

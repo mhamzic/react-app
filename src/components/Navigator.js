@@ -3,13 +3,24 @@ import { Link } from "react-router-dom";
 
 function Navigator() {
   return (
-    <div className="navigator">
-      <Link to="/">Home</Link>
-      &nbsp;|&nbsp;
-      <Link to="/courses">Courses</Link>
-      &nbsp;|&nbsp;
-      <Link to="/students">Students</Link>
-    </div>
+    <ul className="navbar nav ml-auto ">
+      <li className="nav-item">
+        <Link className="nav-link text-light" to="/">
+          Home
+        </Link>
+      </li>
+
+      <li className="nav-item">
+        <Link className="nav-link text-light" to="/courses">
+          Courses
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link text-light" to="/students">
+          Students
+        </Link>
+      </li>
+    </ul>
   );
 }
 
