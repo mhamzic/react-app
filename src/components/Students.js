@@ -20,6 +20,7 @@ function Students() {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Birth Year</th>
+            <th>Address</th>
             <td>
               <Link className="btn btn-success btn-sm" to="/students/0">
                 Add New
@@ -33,6 +34,7 @@ function Students() {
               <td>{student.firstName}</td>
               <td>{student.lastName}</td>
               <td>{student.yearOfBirth}</td>
+              <td>{student.address}</td>
               <td>
                 <Link className="btn btn-secondary btn-sm" to={`/students/${student._id}`}>
                   Edit
